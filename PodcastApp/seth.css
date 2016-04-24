@@ -1,0 +1,350 @@
+/*Seth's CSS for the Podcast App Thing
+
+COLORS
+
+Green:  #468966
+        rgb(70, 137, 102)
+
+Tan:    #FFF0A5
+        rgb(255, 240, 165)
+
+Orange: #FFB03B
+        rgb(255, 176, 59)
+
+L-Red:  #B64926
+        rgb(182, 73, 38)
+
+D-Red:  #8E2800
+        rgb(142, 40, 0)
+
+*/
+
+/*----- Global Stuff -----*/
+
+body {
+    font-family: montserrat;
+}
+
+h1 {
+    font-weight: 700;
+    color: #FFF0A5;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.maincolumn {
+    padding: 0 25px 0 25px;
+}
+
+/*----- Main Nav -----*/
+
+#main_nav {
+    background-color: #FFB03B;
+    height: 50px;
+}
+
+#main_nav h1 {
+    float: left;
+    margin: auto 0 auto 25px;
+}
+
+#main_nav img {
+    float: right;
+    height: 30px;
+    margin-top: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #B64926;
+}
+
+a {
+    color: #FFF0A5;
+    text-decoration: none;
+}
+
+/*----- Hero Img -----*/
+
+#hero_img {
+    height: 300px;
+    width: 100%;
+    background-image: url(img/ira.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero_img blockquote {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 40px;
+    left: 10px;
+    width: 50%;
+}
+
+/*---- Our App -----*/
+
+#our_app {
+    text-align: center;
+    color: #8E2800;
+}
+
+#our_app h2 {
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+#our_app p {
+    padding: 0;
+    margin: 0;
+}
+
+/*----- Screenshots -----*/
+
+#screenshots {
+    width: calc(180px * 4) ;
+    height: 300px;
+}
+#screenshots div {
+    height: calc(100% + 17px);
+    width: 180px;
+    background-size: cover;
+    float: left;
+}
+
+#screen_container {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    margin: 10px 0 20px 0;
+}
+
+#appscreen1 {
+    background-image: url(img/App1.png);
+}
+
+#appscreen2 {
+    background-image: url(img/App2.png);
+}
+
+#appscreen3 {
+    background-image: url(img/App3.png);
+}
+
+#appscreen4 {
+    background-image: url(img/App4.png);
+}
+
+/*----- About Section -----*/
+
+#about {
+    background-color: #8E2800;
+}
+
+#about h2, #about p {
+    color: #FFF0A5;
+}
+
+#about h2 {
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+#about p {
+    text-align: justify;
+    padding: 0 0 20px 0;
+}
+
+/*----- Community -----*/
+
+#community h2 {
+    text-align: center;
+    color: #8E2800;
+}
+
+.halfcolumn {
+    width: 50%;
+    float: left;
+}
+
+#community img {
+    width: 100%;
+}
+
+#community figcaption {
+    font-size: 12px;
+    text-align: center;
+    margin: 10px;
+}
+
+figure {
+    padding: 0 10px;
+    margin: 0;
+}
+
+#community h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/*----- Download -----*/
+
+#download {
+    background-color: #468966;
+}
+
+#download img {
+    width: 70%;
+    margin: 15%;
+}
+
+#download h2 {
+    text-align: center;
+    color: #FFF0A5;
+    margin-bottom: 0;
+}
+
+/*----- Mobile Query -----*/
+
+@media only screen and (max-width: 767px) {
+
+    ul {
+        display: none;
+    }
+    
+    li:nth-child(odd){
+        background-color: #8E2800;
+    }
+
+    li:hover {
+        background-color: rgba(142, 40, 0, .7)
+    }
+    
+    #hamburger {
+        padding-right: 25px;
+    }
+   
+    
+}
+
+/*----- Tablet Query -----*/
+@media only screen and (min-width: 767px) {
+
+    ul {
+        display: inline-block;
+    }
+    
+    #hamburger {
+        visibility: hidden;
+    }
+    
+    #nav_elements li {
+        display: inline-block;
+        background: none;
+        margin-left: 10px;
+    }
+    
+    #main_nav {
+        width: 40%;
+        float: left;
+    }
+
+    #nav_elements {
+        float: right;
+        background: #FFB03B;
+        width: 60%;
+        margin: 0;
+    }
+    
+    #nav_elements li{
+        padding-top: 14px;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 14px;
+        margin: 0;
+        display: inline-block;
+        float: right;
+    }
+    
+    .maxcolumn {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #hero_img {
+        height: 500px;
+        background-position: center top;
+    }
+    
+    #hero_img blockquote {
+        font-size: 30px;
+        width: 500px;
+        top: 20%;
+    }
+    
+    #our_app {
+        padding: 0 20%;
+    }
+    
+    #screenshots div {
+        margin: 10px calc((100% - 720px) / 8);
+    }
+    
+    #screen_container {
+        width: 100%;
+    }
+    
+    #screenshots {
+        width: auto;
+    }
+    
+    #about {
+        padding: 0 20%;
+    }
+    
+    #community img{
+        width: 250px;
+        margin-left: calc(50% - 125px);
+    }
+    
+    #community figcaption {
+        width: 300px;
+        margin: 5px calc(50% - 150px); 
+        font-size: 16px;
+    }
+    
+    #community h2 {
+        font-size: 28px;
+    }
+    
+    #download img {
+        width: 200px;
+        margin: 0 calc(50% - 100px);
+        margin-bottom: 40px;
+    }
+    
+}
+
+
+
+
+
+
